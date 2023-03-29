@@ -1,9 +1,8 @@
 package oop_java_dz1;
-import Unit.Human;
-
 import java.util.Collections;
 
 import main;
+import Unit.Human;
 
 public class View {
     private static int step = 1;
