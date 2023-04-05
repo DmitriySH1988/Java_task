@@ -131,12 +131,12 @@ public class Archer extends Unit {
 //Далее, после того как мы нашли ближайшего противника, мы можем направить своего лучника к нему и атаковать его. Например, мы можем реализовать метод attackEnemy следующим образом:
 
 private void attackEnemy(Unit enemy) {
-    if (isAlive() && arrows > 0) { // проверяем, что лучник жив и есть стрелы
+    if (isAlive() && arrows > 0) {          // проверяем, что лучник жив и есть стрелы
         Coords myCoords = getCoords();
         Coords enemyCoords = enemy.getCoords();
         double distance = Math.sqrt(Math.pow(enemyCoords.getX() - myCoords.getX(), 2)
                                   + Math.pow(enemyCoords.getY() - myCoords.getY(), 2));
-        if (distance <= range) { // проверяем, что противник в зоне поражения
+        if (distance <= range) {            // проверяем, что противник в зоне поражения
             arrows--;
             enemy.takeDamage(damage);
             System.out.println("Лучник " + getName() + " атакует " + enemy.getName()
